@@ -79,10 +79,10 @@ class clsDBConnection1 extends DB_MySQL
         $this->AbsolutePage = 0;
         $this->PageSize = 0;
         $this->DB = "MySQL";
-        $this->DBDatabase = "LCMS";
-        $this->DBHost = "localhost";
-        $this->DBUser = "";
-        $this->DBPassword = "";
+        $this->DBDatabase = "kutahu";
+        $this->DBHost = "db";
+        $this->DBUser = "kutahu";
+        $this->DBPassword = "kutahu";
         $this->Persistent = true;
         $this->RecordsCount = 0;
         $this->RecordNumber = 0;
