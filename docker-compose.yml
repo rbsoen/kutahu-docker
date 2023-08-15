@@ -1,0 +1,36 @@
+version: "3.9"
+    
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./newdb/:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: kutahu
+      MYSQL_USER: kutahu
+      MYSQL_PASSWORD: kutahu
+    
+  kutahu:
+    depends_on:
+      - db
+    build: .
+    volumes:
+      - ./aplikasi/LCMS/:/var/www/html/
+    ports:
+      - "8000:80"
+    restart: always
+  
+  phpma:
+    image: beeyev/phpmyadmin-lightweight:latest
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - "8001:80"
+    environment:
+      - PMA_ARBITRARY=1
+volumes:
+  db_data: {}
+
