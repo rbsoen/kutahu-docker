@@ -387,9 +387,9 @@ var $ModModify ;
         $this->cp["ModTitle"] = new clsSQLParameter("ctrlModTitle", ccsText, "", "", $this->ModTitle->GetValue(), "", false, $this->ErrorBlock);
         $this->cp["ModDesc"] = new clsSQLParameter("ctrlModDesc", ccsMemo, "", "", $this->ModDesc->GetValue(), "", false, $this->ErrorBlock);
         $this->cp["ModVersion"] = new clsSQLParameter("ctrlModVersion", ccsText, "", "", $this->ModVersion->GetValue(), "", false, $this->ErrorBlock);
-        $this->cp["ModCreated"] = new clsSQLParameter("expr23", ccsDate, Array("dd", "/", "mm", "/", "yyyy"), Array("yyyy", "-", "mm", "-", "dd", " ", "HH", ":", "nn", ":", "ss", "GMT"), $this->ModCreated, "", false, $this->ErrorBlock);
+        $this->cp["ModCreated"] = new clsSQLParameter("expr23", ccsDate, Array("dd", "/", "mm", "/", "yyyy"), Array("yyyy", "-", "mm", "-", "dd"), $this->ModCreated, "", false, $this->ErrorBlock);
         $this->cp["Mod_ModID"] = new clsSQLParameter("ctrlMod_ModID", ccsInteger, "", "", $this->Mod_ModID->GetValue(), "", false, $this->ErrorBlock);
-        $this->cp["ModModify"] = new clsSQLParameter("expr60", ccsDate, Array("dd", "/", "mm", "/", "yyyy"), Array("yyyy", "-", "mm", "-", "dd", " ", "HH", ":", "nn", ":", "ss"), $this->ModModify, "", false, $this->ErrorBlock);
+        $this->cp["ModModify"] = new clsSQLParameter("expr60", ccsDate, Array("dd", "/", "mm", "/", "yyyy"), Array("yyyy", "-", "mm", "-", "dd"), $this->ModModify, "", false, $this->ErrorBlock);
         $this->CCSEventResult = CCGetEvent($this->CCSEvents, "BeforeBuildInsert");
         $this->SQL = "INSERT INTO `module` ("
              . "AutUsername, "
