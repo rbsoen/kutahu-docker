@@ -8,6 +8,28 @@ include(RelativePath . "/Navigator.php");
   
 //End Include Common Files
 
+// add check
+
+$db = new clsDBConnection1();
+	
+if (!$db->try_connect()) {
+	header("Location: Setup.php"); die();
+}
+
+if (!@mysql_select_db($db->DBDatabase,$db->link_id())) {
+	header("Location: Setup.php"); die();
+}
+
+if (!@mysql_list_fields($db->DBDatabase, "authors")) {
+	header("Location: Setup.php"); die();
+}
+
+if (!@mysql_list_fields($db->DBDatabase, "users")) {
+	header("Location: Setup.php"); die();
+}
+
+// end check
+
 class clsRecordLogin { //Login Class @2-58926B8F
 
 //Variables @2-5C5E2D83
