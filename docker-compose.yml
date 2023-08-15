@@ -4,7 +4,7 @@ services:
   db:
     image: mysql:5.7
     volumes:
-      - ./newdb/:/var/lib/mysql
+      - kutahu-db:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -17,7 +17,7 @@ services:
       - db
     build: .
     volumes:
-      - ./aplikasi/LCMS/:/var/www/html/
+      - kutahu-img-content:/var/www/html/Document
     ports:
       - "8000:80"
     restart: always
@@ -32,5 +32,6 @@ services:
     environment:
       - PMA_ARBITRARY=1
 volumes:
-  db_data: {}
+  kutahu-img-content: {}
+  kutahu-db: {}
 

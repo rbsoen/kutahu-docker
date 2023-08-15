@@ -1,6 +1,6 @@
 FROM nouphet/docker-php4
 
-COPY aplikasi/LCMS /var/www/html/
+COPY Aplikasi /var/www/html/
 COPY php.ini /etc/php.ini
 WORKDIR /var/www/html
 
