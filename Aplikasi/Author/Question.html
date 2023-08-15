@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleAuthor.css">
+<script language="javascript">
+function Delete(str,MyLinkStr,MyLinkObject)
+{
+
+	if(confirm("Hapus "+str+"?"))
+	{
+	MyLinkObject.href=MyLinkStr;
+	}
+	return false;
+}
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY">
+{Header}
+<table cellspacing="0" cellpadding="0" width="100%" height="100%" border="0">
+  <tr>
+    <td valign="top" width="1%" rowspan="2">{MenuAuthor}</td> 
+    <td valign="top" height="10">
+      <table width="100%" border="0">
+        <tr>
+          <td>{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="CobaltMainTitle">Daftar Pertanyaan</td> 
+        </tr>
+ 
+      </table>
+ 
+      <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+          <td>
+            <!-- BEGIN Grid question1 -->
+            <table class="CobaltFormTABLE" cellpadding="3" border="0" width="100%">
+              <!-- BEGIN Row -->
+              <tr>
+                <td class="CobaltColumnTD" nowrap width="1%">Modul</td> 
+                <td class="CobaltDataTD">{ModTitle}</td> 
+              </tr>
+ 
+              <tr>
+                <td class="CobaltColumnTD" nowrap width="1%">Bab</td> 
+                <td class="CobaltDataTD">{CatTitle}</td> 
+              </tr>
+ 
+              <tr>
+                <td class="CobaltColumnTD" nowrap width="1%">Sub Bab</td> 
+                <td class="CobaltDataTD">{KnowAreaTitle}&nbsp;</td> 
+              </tr>
+              <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr>
+                <td class="CobaltDataTD" colspan="2">No records&nbsp;</td> 
+              </tr>
+              <!-- END NoRecords -->
+            </table>
+ <!-- END Grid question1 --></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Grid question -->
+      <table class="CobaltFormTABLE" cellpadding="3" border="0" width="100%">
+        <tr>
+          <td class="CobaltColumnTD" nowrap align="middle" width="10%">&nbsp;</td> 
+          <td class="CobaltColumnTD" nowrap align="middle">
+            <!-- BEGIN Sorter Sorter_QueTitle --><a class="CobaltSorterLink" href="{Sort_URL}">Pertanyaan</a> 
+            <!-- BEGIN Asc_On --><img src="../Themes/Cobalt/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="../Themes/Cobalt/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_QueTitle -->&nbsp;</td> 
+          <td class="CobaltColumnTD" nowrap align="middle" width="60">Modul&nbsp;</td> 
+          <td class="CobaltColumnTD" nowrap align="middle" width="70">Bab</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="CobaltDataTD" align="middle"><a class="CobaltDataLink" href="{ImageLink1}"><img class="" title="Ubah" src="../Images/edit.gif" border="0"></a>&nbsp;{lblDelete}</td> 
+          <td class="CobaltDataTD">{QueTitle}&nbsp;</td> 
+          <td class="CobaltDataTD" align="middle"><input type="checkbox" name="{QueModule_Name}" value="1" class="CobaltInput" disabled {QueModule}>&nbsp;</td> 
+          <td class="CobaltDataTD" align="middle"><input type="checkbox" name="{QueCategory_Name}" value="1" class="CobaltInput" disabled {QueCategory}>&nbsp;</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="CobaltDataTD" colspan="4">No records&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="CobaltFooterTD" nowrap colspan="4"><a class="CobaltDataLink" href="{Link1_Src}">Tambah
+            Pertanyaan</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Prev_On --><a class="CobaltNavigatorLink" href="{Prev_URL}"><img src="../Themes/Cobalt/PrevOn.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="../Themes/Cobalt/PrevOff.gif" border="0"><!-- END Prev_Off -->
+            <!-- BEGIN Next_On --><a class="CobaltNavigatorLink" href="{Next_URL}"><img src="../Themes/Cobalt/NextOn.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="../Themes/Cobalt/NextOff.gif" border="0"><!-- END Next_Off --><!-- END Navigator Navigator -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid question --></td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>

@@ -1,0 +1,46 @@
+
+<script>
+		//This script is not related with the tree itself, just used for my example
+		function getQueryString(index)
+		{
+			var paramExpressions;
+			var param
+			var val
+			paramExpressions = window.location.search.substr(1).split("&");
+			if (index < paramExpressions.length)
+			{
+				param = paramExpressions[index]; 
+				if (param.length > 0) {
+					return eval(unescape(param));
+				}
+			}
+			return ""
+		}
+		</script>
+<!-- SECTION 3: These four scripts define the tree, do not remove-->
+<script src="../Tree/ua.js"></script>
+<script src="../Tree/Myftiens4.js"></script>
+<script language="javascript">
+USETEXTLINKS = 1
+STARTALLOPEN = 0
+USEFRAMES = 0
+USEICONS = 1
+WRAPTEXT = 1
+PERSERVESTATE = 1
+WRAPTEXT=0;
+USETEXTLINKSTITLE =1;
+
+
+ICONPATH = '../Tree/' //change if the gif's folder is a subfolder, for example: 'images/'
+
+
+ 
+</script>
+{lblTree}
+<table cellspacing="0" cellpadding="2" border="1" width="100%" height="100%">
+  <tr>
+    <td bgcolor="white" valign="top"><a style="FONT-SIZE: 7pt; COLOR: silver; TEXT-DECORATION: none" href="http://www.treemenu.net/" target="_blank"></a> <img height="1" alt="" src="../Tree/empty.gif" width="190" border="0">
+      <script>initializeDocument()</script>
+    </td> 
+  </tr>
+</table>

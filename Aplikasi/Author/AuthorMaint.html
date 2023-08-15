@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleAuthor.css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+function CekMyValue(MyObj,MyValidator)
+{
+	
+	var MyElement = document.getElementById(MyValidator);
+	
+		if(MyObj.value=="")
+		{MyElement.style.visibility="visible";document.MM_returnValue=false;}else{MyElement.style.visibility="hidden";}
+	
+
+}
+function CekMyLength(MyObj,MyValidator,MyLength)
+{
+	var MyElement = document.getElementById(MyValidator);
+		if(MyObj.value==""){MyElement.style.visibility="visible";document.MM_returnValue=false;}
+		else
+		{
+		if(MyObj.value.length<MyLength)
+		{MyElement.style.visibility="visible";document.MM_returnValue=false;}else{MyElement.style.visibility="hidden";}
+		}
+
+
+}
+function CekMyEmail(MyObj,MyValidator) 
+{
+		var MyElement = document.getElementById(MyValidator);
+		if(MyObj.value=="" || MyObj.value.indexOf('@', 0) == -1 ||  MyObj.value.indexOf('.', 0) == -1)
+		{
+			if(MyObj.value!="")
+			{alert("Penulisan Email anda salah");}
+			MyElement.style.visibility="visible";document.MM_returnValue=false;
+		}else{MyElement.style.visibility="hidden";}
+
+}
+function MyValidate()
+{
+	document.MM_returnValue=true;
+	CekMyLength(document.forms[0].AutUsername,'ValAutUsername',6);
+	CekMyLength(document.forms[0].AutPassword,'ValAutPassword',6);
+	CekMyValue(document.forms[0].AutName,'ValAutName');
+	CekMyEmail(document.forms[0].AutEmail,'ValAutEmail');
+	CekMyValue(document.forms[0].AutPhone,'ValAutPhone');
+	CekMyValue(document.forms[0].AutLevel,'ValAutLevel');
+
+
+}
+function MyConfirm()
+{
+
+	if(document.MM_returnValue==true)
+	{
+		if(document.forms[0].AutPassword.value!=document.forms[0].confirmpassword.value)
+		{
+			alert("Password dan Konfirmasi Password, tidak sama");
+			document.MM_returnValue=false;
+		}
+	}
+	
+	
+
+}
+//-->
+</script>
+<script language="JavaScript">
+//Begin CCS script
+//Include JSFunctions @1-5F368366
+  </script>
+<script language="JavaScript" src="../functions.js"></script>
+<script language="JavaScript">
+  
+//End Include JSFunctions
+
+//page_authors_Button_Delete_OnClick @11-AC787EFA
+function page_authors_Button_Delete_OnClick()
+{
+    var result;
+//End page_authors_Button_Delete_OnClick
+
+//Confirmation Message @12-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close page_authors_Button_Delete_OnClick @11-BC33A33A
+    return result;
+}
+//End Close page_authors_Button_Delete_OnClick
+
+//page_authors_Button_Cancel_OnClick @13-EB5A6D99
+function page_authors_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_authors_Button_Cancel_OnClick
+
+//bind_events @1-705AEE88
+function bind_events() {
+    if (document.forms["authors"]) check_and_bind('document.forms["authors"].Button_Delete','onclick',page_authors_Button_Delete_OnClick);
+    if (document.forms["authors"]) check_and_bind('document.forms["authors"].Button_Cancel','onclick',page_authors_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+//End CCS script
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY" onload="MyValidate();">
+{Header}
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td valign="top" width="1%" rowspan="2">{MenuAuthor}</td> 
+    <td height="10">
+      <table width="100%" border="0">
+        <tr>
+          <td>{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="CobaltMainTitle">{lblTitle}</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Record authors -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}" onSubmit="if(hdnCancel.value!=1){MyValidate();MyConfirm();return document.MM_returnValue;}">
+        <font class="CobaltFormHeaderFont"></font> 
+        <table class="CobaltFormTABLE" cellpadding="3" border="0">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="CobaltErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Login ID</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="15" size="15" value="{AutUsername}" name="{AutUsername_Name}" onchange="CekMyLength(this,'ValAutUsername',6);"><span id="ValAutUsername">* (min 6 hurup)</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Password&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" type="password" maxlength="15" size="15" value="{AutPassword}" name="{AutPassword_Name}" onchange="CekMyLength(this,'ValAutPassword',6);"><span id="ValAutPassword">* (min 6 hurup)</span>&nbsp;</td> 
+          </tr>
+ <tr>
+					  <td class="CobaltFieldCaptionTD" nowrap>Konfirmasi Password&nbsp;</td> 
+      <td class="CobaltDataTD"><input class="CobaltInput" type="password" maxlength="15" size="15" value="" name="confirmpassword" onchange="CekMyLength(this,'Valconfirmpassword',6);"><span id="Valconfirmpassword">* (min 6 hurup)</span>&nbsp;</td> 
+    </tr>
+
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Nama&nbsp;Lengkap</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="50" size="50" value="{AutName}" name="{AutName_Name}" onchange="CekMyValue(this,'ValAutName')"><span id="ValAutName">*</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Departemen&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="50" size="50" value="{AutDept}" name="{AutDept_Name}">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Instansi&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="50" size="50" value="{AutInstance}" name="{AutInstance_Name}">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Alamat</td> 
+            <td class="CobaltDataTD"><textarea class="CobaltTextarea" name="{AutAddress_Name}" rows="3" cols="50">{AutAddress}</textarea>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Telepon&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="15" size="15" value="{AutPhone}" name="{AutPhone_Name}"  onchange="CekMyValue(this,'ValAutPhone')"><span id="ValAutPhone">*</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Email&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="150" size="50" value="{AutEmail}" name="{AutEmail_Name}"  onchange="CekMyEmail(this,'ValAutEmail')"><span id="ValAutEmail">*</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Level</td> 
+            <td class="CobaltDataTD">
+              <select class="CobaltSelect" name="{AutLevel_Name}" onchange="CekMyValue(this,'ValAutLevel')">
+                <option value="" selected>Select Value</option>
+ {AutLevel_Options} 
+              </select><span id="ValAutLevel">*</span>&nbsp;
+ </td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Aktif</td> 
+            <td class="CobaltDataTD"><input class="" type="checkbox" value="1" name="{AutActive_Name}" {AutActive}></td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Pengalaman</td> 
+            <td class="CobaltDataTD">1.<input name="{txtExperience1_Name}" value="{txtExperience1}" class="CobaltInput" maxlength="150" size="30">&nbsp;tahun <input class="CobaltInput" size="4" value="{txtTahun1}" name="{txtTahun1_Name}" maxlength="4"><input type="hidden" value="{AutExperience1}" name="{AutExperience1_Name}"><br>
+              2.<input class="CobaltInput" value="{txtExperience2}" name="{txtExperience2_Name}" maxlength="150" size="30">&nbsp;tahun <input class="CobaltInput" value="{txtTahun2}" name="{txtTahun2_Name}" size="4" maxlength="4"><input type="hidden" value="{AutExperience2}" name="{AutExperience2_Name}"><br>
+              3.<input class="CobaltInput" value="{txtExperience3}" name="{txtExperience3_Name}" maxlength="150" size="30">&nbsp;tahun <input class="CobaltInput" value="{txtTahun3}" name="{txtTahun3_Name}" maxlength="4" size="4"><input type="hidden" value="{AutExperience3}" name="{AutExperience3_Name}"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Foto&nbsp;</td> 
+            <td class="CobaltDataTD">
+              <!-- BEGIN FileUpload AutPhoto --><input type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input class="CobaltInput" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete <input class="CobaltInput" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload AutPhoto --></td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="CobaltButton" type="submit" value="Hapus" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="CobaltButton" type="submit" value="Batal" name="{Button_Name}" onclick="hdnCancel.value=1"><input type="hidden" name="hdnCancel" value="0"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record authors --></td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>

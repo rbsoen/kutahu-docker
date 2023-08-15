@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleAuthor.css">
+<script language="JavaScript" type="text/JavaScript">
+
+function WindowOpen(Url,MyName,Width,Height,Scroll)	{	
+	var String="";
+   	String =  "toolbar=0,location=0,directories=0,status=0,menubar=0,"
+	String += "scrollbars=" + Scroll + ",resizable=1,copyhistory=0";
+   	String += ",width=";
+   	String += Width;
+   	String += ",height=";
+   	String += Height;
+   	win = window.open(Url,MyName,String);	
+	win.focus();
+}
+function Delete(str,MyLinkStr,MyLinkObject)
+{
+
+	if(confirm("Hapus "+str+"?"))
+	{
+	MyLinkObject.href=MyLinkStr;
+	return true;
+	}
+	else
+	{
+	return false;
+	}
+}
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY">
+{Header}
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td valign="top" width="1%" rowspan="2">{MenuAuthor}</td> 
+    <td valign="top" height="10">
+      <table width="100%" border="0">
+        <tr>
+          <td>{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="CobaltMainTitle">Direktori Gambar</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">&nbsp; 
+      <table width="100%" border="0" class="CobaltFormTABLE">
+        <tr>
+          <td width="30%" class="" valign="top">&nbsp;{lblDir}</td>
+          <td width="30%" valign="top" align="middle" class="">
+            <!-- BEGIN Record MakeDir -->
+            <form name="{HTMLFormName}" action="{Action}" method="post">
+              <table class="CobaltFormTABLE" cellpadding="3" border="0">
+                <!-- BEGIN Error -->
+                <tr>
+                  <td class="CobaltErrorDataTD">{Error}</td> 
+                </tr>
+                <!-- END Error -->
+                <tr>
+					<td>Tambah Direktori:</td>
+				</tr>
+				<tr>                  
+				  <td class="" align="middle"><input class="CobaltInput" value="{txtDir}" name="{txtDir_Name}">&nbsp;<!-- BEGIN Button btnMakeDir --><input class="CobaltButton" type="submit" value="Direktori" name="{Button_Name}"><!-- END Button btnMakeDir --></td> 
+                </tr>         
+ 
+              </table>
+ 
+            </form>
+ 			<!-- END Record MakeDir -->
+		  </td> 
+          <td width="40%" valign="top" align="middle" class="">
+            <!-- BEGIN Record NewRecord1 -->
+            <form name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+              <table class="CobaltFormTABLE" cellpadding="3" border="0">
+                <!-- BEGIN Error -->
+                <tr>
+                  <td class="CobaltErrorDataTD">{Error}</td> 
+                </tr>
+                <!-- END Error -->
+                 <tr>
+					<td>Nama File:</td>
+				</tr>
+				<tr>
+                  <td class="">
+                    <!-- BEGIN FileUpload FileUpload1 --><input type="hidden" value="{State}" name="{ControlName}">
+                    <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+                    <!-- BEGIN Upload --><input class="CobaltInput" type="file" name="{FileControl}"><!-- END Upload -->
+                    <!-- BEGIN DeleteControl -->Delete <input class="CobaltInput" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload1 -->&nbsp;<!-- BEGIN Button Button_Insert --><input class="CobaltButton" type="submit" value="Upload File" name="{Button_Name}"><!-- END Button Button_Insert -->&nbsp;&nbsp;&nbsp;</td> 
+                </tr>
+ 
+                <tr>
+                  <td class="" nowrap align="middle">
+                     </td> 
+                </tr>
+ 
+              </table>
+ 
+            </form>
+ <!-- END Record NewRecord1 --></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td valign="top">{lblTable}</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>

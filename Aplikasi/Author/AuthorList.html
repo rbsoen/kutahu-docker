@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleAuthor.css">
+<script language="javascript">
+function Delete(str,MyLinkStr,MyLinkObject)
+{
+
+	if(confirm("Hapus "+str+"?"))
+	{
+	MyLinkObject.href=MyLinkStr;
+	return true;
+	}
+	else
+	{
+	return false;
+	}
+}
+function Active(str,MyLinkStr,MyLinkObject)
+{
+
+	MyLinkObject.href=MyLinkStr;
+	return true;
+
+}
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY">
+{Header}
+<table cellspacing="0" cellpadding="0" width="100%" height="100%" border="0">
+  <tr>
+    <td valign="top" width="1%" rowspan="2">{MenuAuthor}</td> 
+    <td valign="top" height="10">
+      <table width="100%" border="0">
+        <tr>
+          <td>{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="CobaltMainTitle">Daftar Penulis</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Grid authors -->
+      <table class="CobaltFormTABLE" cellpadding="3" border="0" width="100%" align="center">
+        <tr>
+          <td class="CobaltColumnTD" nowrap align="middle" width="60">&nbsp;</td> 
+          <td class="CobaltColumnTD" nowrap width="200" align="middle">
+            <!-- BEGIN Sorter Sorter_AutName --><a class="CobaltSorterLink" href="{Sort_URL}">Nama
+            Lengkap</a> 
+            <!-- BEGIN Asc_On --><img src="../Themes/Cobalt/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="../Themes/Cobalt/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_AutName -->&nbsp;</td> 
+          <td class="CobaltColumnTD" nowrap align="middle">
+            <!-- BEGIN Sorter Sorter_AutDept --><a class="CobaltSorterLink" href="{Sort_URL}">Departemen</a> 
+            <!-- BEGIN Asc_On --><img src="../Themes/Cobalt/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="../Themes/Cobalt/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_AutDept -->&nbsp;</td> 
+          <td class="CobaltColumnTD" nowrap align="middle">
+            <!-- BEGIN Sorter Sorter_AutInstance --><a class="CobaltSorterLink" href="{Sort_URL}">Instansi</a> 
+            <!-- BEGIN Asc_On --><img src="../Themes/Cobalt/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="../Themes/Cobalt/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_AutInstance -->&nbsp;</td> 
+          <td class="CobaltColumnTD" nowrap align="middle">
+            <!-- BEGIN Sorter Sorter_AutEmail --><a class="CobaltSorterLink" href="{Sort_URL}">Email</a> 
+            <!-- BEGIN Asc_On --><img src="../Themes/Cobalt/AscOn.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="../Themes/Cobalt/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_AutEmail -->&nbsp;</td> 
+          <td class="CobaltColumnTD" nowrap align="middle" width="5%">Aktif&nbsp;</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="CobaltDataTD" align="middle"><a class="CobaltDataLink" href="{ImageLink1}"><img class="" title="Ubah" src="../Images/edit.gif" border="0"></a>&nbsp;{lblDelete}<input type="hidden" value="{hdnAutActive}" name="{hdnAutActive_Name}"><a class="CobaltDataLink" href="{ImageLink1}"></a></td> 
+          <td class="CobaltDataTD">{AutName}&nbsp;</td> 
+          <td class="CobaltDataTD">{AutDept}&nbsp;</td> 
+          <td class="CobaltDataTD">{AutInstance}&nbsp;</td> 
+          <td class="CobaltDataTD" align="middle">{AutEmail}&nbsp;</td> 
+          <td class="CobaltDataTD" align="middle" width="80">{lblActive}</td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="CobaltDataTD" colspan="6">Tidak ada data</td> 
+        </tr>
+        <!-- END NoRecords -->
+        <tr>
+          <td class="CobaltFooterTD" nowrap colspan="6"><a class="CobaltDataLink" href="{Link1_Src}">Tambah
+            Penulis</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Prev_On --><a class="CobaltNavigatorLink" href="{Prev_URL}"><img src="../Themes/Cobalt/PrevOn.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="../Themes/Cobalt/PrevOff.gif" border="0"><!-- END Prev_Off -->
+            <!-- BEGIN Next_On --><a class="CobaltNavigatorLink" href="{Next_URL}"><img src="../Themes/Cobalt/NextOn.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="../Themes/Cobalt/NextOff.gif" border="0"><!-- END Next_Off --><!-- END Navigator Navigator -->&nbsp; </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid authors -->{lblError}</td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>

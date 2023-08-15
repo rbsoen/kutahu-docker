@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="Themes/Cobalt/StyleUser.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include JSFunctions @1-DA3E7A20
+  </script>
+<script language="JavaScript" src="functions.js"></script>
+<script language="JavaScript">
+  
+//End Include JSFunctions
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @7-5C89A949
+    if (document.forms["Login"] && document.Login.login) document.Login.login.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//bind_events @1-B716D3FC
+function bind_events() {
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+//End CCS script
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#FFFFFF" text="#000000" class="CobaltPageBODY">
+<table height="100%" width="100%" cellSpacing="0" cellPadding="0" border="0">
+	<tr>
+<!-- BEGIN Record Login -->
+<form method="post" action="{Action}" name="{HTMLFormName}">  
+  		<td width="25%" valign="top" bgcolor="#00339D">
+			<table width="100%" cellSpacing="0" cellPadding="0" border="0">
+				<tr>
+					<td>&nbsp;</td>
+				</tr>	
+				<tr>
+					<td align="center" class="LoginFontTitle">Login</td>
+				</tr>
+				<tr>
+					<TD align="middle"> 
+						  <table border="0" cellpadding="3" class="CobaltFormTABLE">
+							<!-- BEGIN Error -->
+							<tr>
+							  <td colspan="3" class="CobaltErrorDataTD">{Error}</td> 
+							</tr>
+							<!-- END Error -->
+							<tr>
+							  <td class="CobaltFieldCaptionTD" nowrap colspan="2">
+								<!-- BEGIN RadioButton rdbUserAuthor --><input class="CobaltInput" type="radio" value="{Value}" name="{rdbUserAuthor_Name}" {Check}>{Description}<!-- END RadioButton rdbUserAuthor --></td> 
+							</tr>
+						 
+							<tr>
+							  <td nowrap class="CobaltFieldCaptionTD">Login ID</td> 
+							  <td class="CobaltDataTD"><input name="{login_Name}" value="{login}" maxlength="100" class="CobaltInput">&nbsp;</td> 
+							</tr>
+						 
+							<tr>
+							  <td nowrap class="CobaltFieldCaptionTD">Password&nbsp;</td> 
+							  <td class="CobaltDataTD"><input type="password" name="{password_Name}" value="{password}" maxlength="100" class="CobaltInput">&nbsp;</td> 
+							</tr>
+						 
+							<tr>							  	
+								<td colspan="2" align="right" nowrap class="CobaltFooterTD"> 
+								<!-- BEGIN Button Button_DoLogin --><input name="{Button_Name}" type="submit" value="Login" class="CobaltButton"><!-- END Button Button_DoLogin -->&nbsp;<a class="LoginDataLink" href="{Link1_Src}">Pengguna Baru</a></td> 
+							 
+							</tr>
+						 
+						  </table>
+						  </TD>
+				</tr>
+				<tr>
+					<td height="100%">					
+						<table class="LoginDataFont" height="100%" cellSpacing="0" cellPadding="4" border="0">
+							<tr>
+								<td><br>E-Learning System untuk pembuatan modul pengetahuan berbasis web<br><br></td>
+							</tr>
+						</table>
+						
+					</td>
+				</tr>
+				<tr>
+								<TD align="center" rowSpan="2" valign="bottom"><FONT style="font-family: Verdana,Arial,Helvetica; font-size: 8pt; font-weight: bold; color: #FFCC00;">Kutahu V.1 <br> Copyright 
+										&copy;2004 P3TIE - BPPT</FONT></TD>
+							</tr>
+			</table>
+		</td>
+		<td width="75%" align="center" valign="middle">
+			<table height="500" cellSpacing="0" cellPadding="2" border="0">
+				<tr>
+					<td align="center" valign="top"><img src="Images/logologin.gif"></td>
+				</tr>
+				<tr>
+					<td align="center"><img src="Images/frontimage.jpg"></td>
+				</tr>
+				<tr>
+					
+            <td align="center" valign="bottom"> <FONT style="font-family: Verdana,Arial,Helvetica; font-size: 8pt; color: #000000;"> 
+              Aplikasi ini optimal menggunakan browser Ns6+, Mozilla 1.7 atau 
+              Ie6+<br>
+              <br></font>
+						<FONT style="font-family: Verdana,Arial,Helvetica; font-size: 10pt; font-weight: bold; color: #000000;">
+						Pusat Pengkajian dan Penerapan Teknologi Informasi dan Elektronika<br><br>
+						Badan Pengkajian dan Penerapan Teknologi</font>
+					</td>
+				</tr>
+			</table>
+		</td>
+</form>
+<!-- END Record Login -->
+</tr>
+</table>
+</body>
+</html>

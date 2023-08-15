@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="Themes/Cobalt/Style.css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+function CekMyValue(MyObj,MyValidator)
+{
+	
+	var MyElement = document.getElementById(MyValidator);
+	
+		if(MyObj.value=="")
+		{MyElement.style.visibility="visible";document.MM_returnValue=false;}else{MyElement.style.visibility="hidden";}
+	
+
+}
+
+function CekMyLength(MyObj,MyValidator,MyLength)
+{
+	var MyElement = document.getElementById(MyValidator);
+		if(MyObj.value==""){MyElement.style.visibility="visible";document.MM_returnValue=false;}
+		else
+		{
+		if(MyObj.value.length<MyLength)
+		{MyElement.style.visibility="visible";document.MM_returnValue=false;}else{MyElement.style.visibility="hidden";}
+		}
+
+
+}
+function CekMyEmail(MyObj,MyValidator) 
+{
+		var MyElement = document.getElementById(MyValidator);
+		if(MyObj.value=="" || MyObj.value.indexOf('@', 0) == -1 ||  MyObj.value.indexOf('.', 0) == -1)
+		{
+			if(MyObj.value!="")
+			{alert("Penulisan Email anda salah");}
+			MyElement.style.visibility="visible";document.MM_returnValue=false;
+		}else{MyElement.style.visibility="hidden";}
+
+}
+
+function MyValidate()
+{
+
+	document.MM_returnValue=true;
+	CekMyLength(document.forms[0].UserUsername,'ValUserUsername',6);
+	CekMyLength(document.forms[0].UserPassword,'ValUserPassword',6);
+	CekMyLength(document.forms[0].confirmpassword,'Valconfirmpassword',6);
+	CekMyValue(document.forms[0].UserFullName,'ValUserFullName');
+	CekMyEmail(document.forms[0].UserEmail,'ValUserEmail');
+
+		
+		
+	
+	
+	
+
+}
+function MyConfirm()
+{
+
+	if(document.MM_returnValue==true)
+	{
+		if(document.forms[0].UserPassword.value!=document.forms[0].confirmpassword.value)
+		{
+			alert("Password dan Konfirmasi Password, tidak sama");
+			document.MM_returnValue=false;
+		}
+	}
+	
+	
+
+}
+//-->
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY" onload="MyValidate();">
+<table height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+<!-- BEGIN Record users -->
+<form name="{HTMLFormName}" action="{Action}" method="post" onSubmit="if(hdnCancel.value!=1){MyValidate();MyConfirm();return document.MM_returnValue;}">
+	<tr>
+		<td align="center" valign="top"><img src="Images/logologin.gif"></td>
+	</tr>
+	<tr>
+		<td vAlign="center" align="middle">
+				  <font class="CobaltFormHeaderFont">Pengguna&nbsp;Baru </font> 
+				  <table class="CobaltFormTABLE" cellpadding="3" border="0">
+					<!-- BEGIN Error -->
+					<tr>
+					  <td class="CobaltErrorDataTD" colspan="2">{Error}</td> 
+    </tr>
+				 <!-- END Error -->
+					<tr>
+					  <td class="CobaltFieldCaptionTD" nowrap>Login ID</td> 
+      <td class="CobaltDataTD"><input class="CobaltInput" maxlength="15" size="15" value="{UserUsername}" name="{UserUsername_Name}" onchange="CekMyLength(this,'ValUserUsername',6);"><span id="ValUserUsername">* (min 6 hurup)</span>&nbsp;</td> 
+    </tr>
+				 
+					<tr>
+					  <td class="CobaltFieldCaptionTD" nowrap>Password&nbsp;</td> 
+      <td class="CobaltDataTD"><input class="CobaltInput" type="password" maxlength="15" size="15" value="{UserPassword}" name="{UserPassword_Name}" onchange="CekMyLength(this,'ValUserPassword',6);"><span id="ValUserPassword">* (min 6 hurup)</span>&nbsp;</td> 
+    </tr>
+				 
+	 </tr>
+				 
+					<tr>
+					  <td class="CobaltFieldCaptionTD" nowrap>Konfirmasi Password&nbsp;</td> 
+      <td class="CobaltDataTD"><input class="CobaltInput" type="password" maxlength="15" size="15" value="" name="confirmpassword" onchange="CekMyLength(this,'Valconfirmpassword',6);"><span id="Valconfirmpassword">* (min 6 hurup)</span>&nbsp;</td> 
+    </tr>				<tr>
+					  <td class="CobaltFieldCaptionTD" nowrap>Nama Lengkap</td> 
+      <td class="CobaltDataTD"><input class="CobaltInput" value="{UserFullName}" name="{UserFullName_Name}" maxlength="50" size="50" onchange="CekMyValue(this,'ValUserFullName')"><span id="ValUserFullName">*</span>&nbsp;</td> 
+    </tr>
+				 
+					<tr>
+					  <td class="CobaltFieldCaptionTD" nowrap>Alamat</td> 
+      <td class="CobaltDataTD"><textarea class="CobaltTextarea" name="{UserAddress_Name}" rows="5" cols="50">{UserAddress}</textarea></td> 
+    </tr>
+				 
+					<tr>
+					  <td class="CobaltFieldCaptionTD" nowrap>Email</td> 
+      <td class="CobaltDataTD"><input class="CobaltInput" maxlength="150" size="50" value="{UserEmail}" name="{UserEmail_Name}" onchange="CekMyEmail(this,'ValUserEmail')"><span id="ValUserEmail">*</span>&nbsp;</td> 
+    </tr>
+				 
+					<tr>
+					  <td class="CobaltFooterTD" nowrap align="right" colspan="2">
+						<!-- BEGIN Button Button_Insert --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Insert -->
+						<!-- BEGIN Button Button_Cancel --><input class="CobaltButton" type="submit" value="Batal" name="{Button_Name}" onclick="hdnCancel.value=1"><input type="hidden" name="hdnCancel" value="0"><!-- END Button Button_Cancel -->&nbsp; </td> 
+					</tr>
+				 
+				  </table>
+<br>
+						<TABLE cellSpacing="0" cellPadding="4" border="0">
+							<tr><td align="right">Kontak administrator anda untuk konfirmasi pengaktifan</td></tr>						
+							<tr>
+								<TD align="right" rowSpan="2"><FONT face="MS Sans Serif,Arial,Helvetica" size="-2">Copyright 
+										&copy;2004 BPPT - P3TIE</FONT></TD>
+							</tr>						
+						</TABLE>
+					
+				</td>
+			</tr>
+			<tr>
+					<td align="center" valign="top">
+						<FONT style="font-family: Verdana,Arial,Helvetica; font-size: 8pt; color: #000000;">
+						Aplikasi ini optimal menggunakan browser Ns6+, Mozilla 1.7 atau Ie6+<br><br></font>
+						<FONT style="font-family: Verdana,Arial,Helvetica; font-size: 10pt; font-weight: bold; color: #000000;">
+						Pusat Pengkajian dan Penerapan Teknologi Informasi dan Elektronika<br><br>
+						Badan Pengkajian dan Penerapan Teknologi</font>
+					</td>
+				</tr>
+		
+</form>
+<!-- END Record users -->
+</table>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleAuthor.css">
+<script language="javascript">
+function Delete(str,MyLinkStr,MyLinkObject)
+{
+
+	if(confirm("Hapus "+str+"?"))
+	{
+	MyLinkObject.href=MyLinkStr;
+	return true;
+	}
+	else
+	{
+	return false;
+	}
+}
+</script>
+<script language="JavaScript">
+//Begin CCS script
+//Include JSFunctions @1-5F368366
+  </script>
+<script language="JavaScript" src="../functions.js"></script>
+<script language="JavaScript">
+  
+//End Include JSFunctions
+
+//page_knowledgearea_Button_Submit_OnClick @13-E304D3FC
+function page_knowledgearea_Button_Submit_OnClick()
+{
+    var result;
+//End page_knowledgearea_Button_Submit_OnClick
+
+//Confirmation Message @14-257FDD03
+    return confirm('Submit records?');
+//End Confirmation Message
+
+//Close page_knowledgearea_Button_Submit_OnClick @13-BC33A33A
+    return result;
+}
+//End Close page_knowledgearea_Button_Submit_OnClick
+
+//page_knowledgearea_Cancel_OnClick @15-5DECC33C
+function page_knowledgearea_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_knowledgearea_Cancel_OnClick
+
+//bind_events @1-AEDE7C30
+function bind_events() {
+    if (document.forms["knowledgearea"]) check_and_bind('document.forms["knowledgearea"].Button_Submit','onclick',page_knowledgearea_Button_Submit_OnClick);
+    if (document.forms["knowledgearea"]) check_and_bind('document.forms["knowledgearea"].Cancel','onclick',page_knowledgearea_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+//End CCS script
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY">
+{Header}
+<table cellspacing="0" cellpadding="0" width="100%" height="100%" border="0">
+  <tr>
+    <td valign="top" width="1%" rowspan="2">{MenuAuthor}</td> 
+    <td valign="top" height="10">
+      <table width="100%" border="0">
+        <tr>
+          <td>{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td>Daftar Sub Bab</td> 
+        </tr>
+ 
+      </table>
+ 
+      <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+          <td>
+            <!-- BEGIN Grid module -->
+            <table class="CobaltFormTABLE" cellpadding="3" border="0" width="100%">
+              <!-- BEGIN Row -->
+              <tr>
+                <td class="CobaltColumnTD" nowrap width="1%">Modul&nbsp;</td> 
+                <td class="CobaltDataTD">{ModTitle}</td> 
+              </tr>
+ 
+              <tr>
+                <td class="CobaltColumnTD" nowrap width="1%">Bab</td> 
+                <td class="CobaltDataTD">{CatTitle}</td> 
+              </tr>
+              <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr>
+                <td class="CobaltDataTD" colspan="2">No records&nbsp;</td> 
+              </tr>
+              <!-- END NoRecords -->
+            </table>
+ <!-- END Grid module --></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">
+      <!-- BEGIN EditableGrid knowledgearea -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <font class="CobaltFormHeaderFont"></font><input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="CobaltFormTABLE" cellpadding="3" border="0">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="CobaltErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="CobaltColumnTD" nowrap align="middle"></td> 
+            <td class="CobaltColumnTD" nowrap align="middle">
+              <!-- BEGIN Sorter Sorter_KnowAreaTitle --><a class="CobaltSorterLink" href="{Sort_URL}">Sub
+              Bab</a> 
+              <!-- BEGIN Asc_On --><img src="../Themes/Cobalt/AscOn.gif" border="0"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img src="../Themes/Cobalt/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_KnowAreaTitle -->&nbsp;</td> 
+          </tr>
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr>
+            <td class="CobaltErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END RowError -->
+          <tr>
+            <td class="CobaltDataTD" align="middle">{lblAction}<input type="hidden" value="{hdnKnowAreaID}" name="{hdnKnowAreaID_Name}"></td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="150" value="{KnowAreaTitle}" name="{KnowAreaTitle_Name}" size="75"></td> 
+          </tr>
+          <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr>
+            <td class="CobaltDataTD" colspan="2">No records&nbsp;</td> 
+          </tr>
+          <!-- END NoRecords -->
+          <tr>
+            <td class="CobaltFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN Prev_On --><a class="CobaltNavigatorLink" href="{Prev_URL}"><img src="../Themes/Cobalt/PrevOn.gif" border="0"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img src="../Themes/Cobalt/PrevOff.gif" border="0"><!-- END Prev_Off -->
+              <!-- BEGIN Next_On --><a class="CobaltNavigatorLink" href="{Next_URL}"><img src="../Themes/Cobalt/NextOn.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img src="../Themes/Cobalt/NextOff.gif" border="0"><!-- END Next_Off --><!-- END Navigator Navigator -->&nbsp; 
+              <!-- BEGIN Button Button_Submit --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Submit -->&nbsp; 
+              <!-- BEGIN Button Cancel --><input class="CobaltButton" type="submit" value="Batal" name="{Button_Name}"><!-- END Button Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid knowledgearea -->{lblError}</td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>

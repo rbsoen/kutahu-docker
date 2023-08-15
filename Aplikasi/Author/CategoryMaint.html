@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleAuthor.css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+function CekMyValue(MyObj,MyValidator)
+{
+	
+	var MyElement = document.getElementById(MyValidator);
+	
+		if(MyObj.value=="")
+		{MyElement.style.visibility="visible";document.MM_returnValue=false;}else{MyElement.style.visibility="hidden";}
+	
+
+}
+
+
+function MyValidate()
+{
+	document.MM_returnValue=true;
+	CekMyValue(document.forms[0].CatTitle,'ValCatTitle');	
+
+}
+
+//-->
+</script>
+
+<script language="javascript" type="text/javascript" src="../webeditor/tiny_mce/tiny_mce.js"></script>
+<script language="javascript" type="text/javascript">
+	tinyMCE.init({
+		theme : "advanced",theme_advanced_toolbar_location:"top",
+		mode : "textareas",
+		theme_advanced_buttons1 : "bold,italic,underline,strikethrough,separator,justifyleft,justifycenter,justifyright,justifyfull,separator,formatselect,fontselect,fontsizeselect,forecolor",
+		extended_valid_elements : "font[face|size|color]"
+	});
+
+</script>
+<script language="JavaScript" type="text/JavaScript">
+
+function WindowOpen(Url,MyName,Width,Height,Scroll)	{	
+	var String="";
+   	String =  "toolbar=0,location=0,directories=0,status=0,menubar=0,"
+	String += "scrollbars=" + Scroll + ",resizable=0,copyhistory=0";
+   	String += ",width=";
+   	String += Width;
+   	String += ",height=";
+   	String += Height;
+   	win = window.open(Url,MyName,String);	
+	win.focus();
+}
+function MyDisplay(MyValue,MyText)
+		{
+		
+			document.forms[0].Cat_CatID.value=MyValue;
+			var MyElement = document.getElementById("lblCatTitle");
+			MyElement.innerHTML=MyText;
+			
+		}
+		function MyDelete()
+		{
+		
+			document.forms[0].Cat_CatID.value="";
+			var MyElement = document.getElementById("lblCatTitle");
+			MyElement.innerHTML="";
+			
+		}
+ </script>
+<script language="JavaScript">
+//Begin CCS script
+//Include JSFunctions @1-5F368366
+  </script>
+<script language="JavaScript" src="../functions.js"></script>
+<script language="JavaScript">
+  
+//End Include JSFunctions
+
+//page_category_Button_Delete_OnClick @8-47B6EBD7
+function page_category_Button_Delete_OnClick()
+{
+    var result;
+//End page_category_Button_Delete_OnClick
+
+//Confirmation Message @9-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close page_category_Button_Delete_OnClick @8-BC33A33A
+    return result;
+}
+//End Close page_category_Button_Delete_OnClick
+
+//page_category_Button_Cancel_OnClick @10-25077A29
+function page_category_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_category_Button_Cancel_OnClick
+
+//bind_events @1-88A823F1
+function bind_events() {
+    if (document.forms["category"]) check_and_bind('document.forms["category"].Button_Delete','onclick',page_category_Button_Delete_OnClick);
+    if (document.forms["category"]) check_and_bind('document.forms["category"].Button_Cancel','onclick',page_category_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+//End CCS script
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY" onload="MyValidate();">
+{Header}
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td valign="top" width="1%" rowspan="2">{MenuAuthor}</td> 
+    <td height="10">
+      <table width="100%" border="0">
+        <tr>
+          <td>{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="CobaltMainTitle">{lblTitle}</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Record category -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" onSubmit="if(hdnCancel.value!=1){MyValidate();return document.MM_returnValue;}">
+        <font class="CobaltFormHeaderFont"></font> 
+        <table class="CobaltFormTABLE" cellpadding="3" border="0" width="100%">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="CobaltErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Bab</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="150" size="50" value="{CatTitle}" name="{CatTitle_Name}" onchange="CekMyValue(this,'ValCatTitle')"><span id="ValCatTitle">*</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Persyaratan</td> 
+            <td class="CobaltDataTD">{lblCatTitle}&nbsp;{lblLinkCategory}<input type="hidden" value="{Cat_CatID}" name="{Cat_CatID_Name}"></td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Keterangan&nbsp;</td> 
+            <td class="CobaltDataTD"><textarea class="CobaltTextarea" style="WIDTH: 100%" name="{CatDesc_Name}" rows="16" cols="50">{CatDesc}</textarea></td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="CobaltButton" type="submit" value="Hapus" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="CobaltButton" type="submit" value="Batal" name="{Button_Name}" onclick="hdnCancel.value=1"><input type="hidden" name="hdnCancel" value="0"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record category --></td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleUser.css">
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#fffff7" text="#000000" class="CobaltPageBODY">
+{Header}
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td width="1%" valign="top">{MyTree}</td> 
+    <td valign="top">
+      <table width="100%" border="0">
+        <tr>
+          <td align="right">{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="CobaltMainTitle"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <!-- BEGIN Grid category -->
+      <table class="CobaltFormTABLE" cellpadding="3" border="0" width="100%">
+        <tr>
+          <td class="CobaltFieldCaptionTD" colspan="2">Bab
+            :&nbsp;{CatTitle}</td> 
+        </tr>
+        <!-- BEGIN Row -->
+        <tr>
+          <td colspan="2">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0" class="CobaltFormTABLE">
+              <tr>
+                <td width="1%" class="NormalFont" nowrap>Persyaratan :&nbsp;</td> 
+                <td>{category1_CatTitle}<input type="hidden" value="{Cat_CatID}" name="{Cat_CatID_Name}"></td> 
+              </tr>
+ 
+              <tr>
+                <td bgcolor="#cadbff" height="1" colspan="2"></td> 
+              </tr>
+ 
+            </table>
+ </td> 
+        </tr>
+ 
+        <tr>
+          <td class="" colspan="2">{CatDesc}<a class="CobaltDataLink" href="{ImageLink1}"></a></td> 
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr>
+          <td class="CobaltDataTD" colspan="2">No records&nbsp;</td> 
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+ <!-- END Grid category --></td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>

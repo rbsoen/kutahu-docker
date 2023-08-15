@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleAuthor.css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+function CekMyValue(MyObj,MyValidator)
+{
+	
+	var MyElement = document.getElementById(MyValidator);
+	
+		if(MyObj.value=="")
+		{MyElement.style.visibility="visible";document.MM_returnValue=false;}else{MyElement.style.visibility="hidden";}
+	
+
+}
+function CekMyLength(MyObj,MyValidator,MyLength)
+{
+	var MyElement = document.getElementById(MyValidator);
+		if(MyObj.value==""){MyElement.style.visibility="visible";document.MM_returnValue=false;}
+		else
+		{
+		if(MyObj.value.length<MyLength)
+		{MyElement.style.visibility="visible";document.MM_returnValue=false;}else{MyElement.style.visibility="hidden";}
+		}
+
+
+}
+function CekMyEmail(MyObj,MyValidator) 
+{
+		var MyElement = document.getElementById(MyValidator);
+		if(MyObj.value=="" || MyObj.value.indexOf('@', 0) == -1 ||  MyObj.value.indexOf('.', 0) == -1)
+		{
+			if(MyObj.value!="")
+			{alert("Penulisan Email anda salah");}
+			MyElement.style.visibility="visible";document.MM_returnValue=false;
+		}else{MyElement.style.visibility="hidden";}
+
+}
+function MyValidate()
+{
+	document.MM_returnValue=true;
+	CekMyLength(document.forms[0].UserUsername,'ValUserUsername',6);
+	CekMyLength(document.forms[0].UserPassword,'ValUserPassword',6);
+	CekMyValue(document.forms[0].UserFullName,'ValUserFullName');
+	CekMyEmail(document.forms[0].UserEmail,'ValUserEmail');
+
+
+}
+function MyConfirm()
+{
+
+	if(document.MM_returnValue==true)
+	{
+		if(document.forms[0].UserPassword.value!=document.forms[0].confirmpassword.value)
+		{
+			alert("Password dan Konfirmasi Password, tidak sama");
+			document.MM_returnValue=false;
+		}
+	}
+	
+	
+
+}
+//-->
+</script>
+<script language="JavaScript">
+//Begin CCS script
+//Include JSFunctions @1-5F368366
+  </script>
+<script language="JavaScript" src="../functions.js"></script>
+<script language="JavaScript">
+  
+//End Include JSFunctions
+
+//page_users_Button_Delete_OnClick @8-5F0D7E7E
+function page_users_Button_Delete_OnClick()
+{
+    var result;
+//End page_users_Button_Delete_OnClick
+
+//Confirmation Message @9-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close page_users_Button_Delete_OnClick @8-BC33A33A
+    return result;
+}
+//End Close page_users_Button_Delete_OnClick
+
+//page_users_Button_Cancel_OnClick @10-DD4DFAE9
+function page_users_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_users_Button_Cancel_OnClick
+
+//bind_events @1-4AB689FA
+function bind_events() {
+    if (document.forms["users"]) check_and_bind('document.forms["users"].Button_Delete','onclick',page_users_Button_Delete_OnClick);
+    if (document.forms["users"]) check_and_bind('document.forms["users"].Button_Cancel','onclick',page_users_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+//End CCS script
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY" onload="MyValidate();">
+{Header}
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td valign="top" width="1%" rowspan="2">{MenuAuthor}</td> 
+    <td height="10">
+      <table width="100%" border="0">
+        <tr>
+          <td>{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="CobaltMainTitle">{lblTitle}</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Record users -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" onSubmit="if(hdnCancel.value!=1){MyValidate();MyConfirm();return document.MM_returnValue;}">
+        <font class="CobaltFormHeaderFont"></font> 
+        <table class="CobaltFormTABLE" cellpadding="3" border="0">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="CobaltErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Login ID</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="15" size="15" value="{UserUsername}" name="{UserUsername_Name}" onchange="CekMyLength(this,'ValUserUsername',6);"><span id="ValUserUsername">* (min 6 hurup)</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Password&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" type="password" maxlength="15" size="15" value="{UserPassword}" name="{UserPassword_Name}" onchange="CekMyLength(this,'ValUserPassword',6);"><span id="ValUserPassword">* (min 6 hurup)</span>&nbsp;</td> 
+          </tr>
+ 					<tr>
+					  <td class="CobaltFieldCaptionTD" nowrap>Konfirmasi Password&nbsp;</td> 
+      <td class="CobaltDataTD"><input class="CobaltInput" type="password" maxlength="15" size="15" value="" name="confirmpassword" onchange="CekMyLength(this,'Valconfirmpassword',6);"><span id="Valconfirmpassword">* (min 6 hurup)</span>&nbsp;</td> 
+    </tr>
+
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Nama Lengkap&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="50" size="50" value="{UserFullName}" name="{UserFullName_Name}" onchange="CekMyValue(this,'ValUserFullName')"><span id="ValUserFullName">*</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Alamat</td> 
+            <td class="CobaltDataTD"><textarea class="CobaltTextarea" name="{UserAddress_Name}" rows="5" cols="50">{UserAddress}</textarea>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Email</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="150" size="50" value="{UserEmail}" name="{UserEmail_Name}" onchange="CekMyEmail(this,'ValUserEmail')"><span id="ValUserEmail">*</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Aktif&nbsp;</td> 
+            <td class="CobaltDataTD"><input type="checkbox" name="{UserActive_Name}" value="1" class="" {UserActive}>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="CobaltButton" type="submit" value="Hapus" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="CobaltButton" type="submit" value="Batal" name="{Button_Name}" onclick="hdnCancel.value=1"><input type="hidden" name="hdnCancel" value="0"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record users --></td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>

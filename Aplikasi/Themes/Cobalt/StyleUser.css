@@ -1,0 +1,59 @@
+/* Cobalt CCSTheme */
+BODY { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.CobaltPageBODY{ margin-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; color: #000000; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.CobaltFormHeaderFont{ color: #290053; font-size: 18px; font-weight: bold; }
+.CobaltFormTABLE{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.CobaltColumnTD{ border-bottom: 1px solid #3364AE; border-left: 1px solid #5B8ACF; border-right: 1px solid #3364AE; border-top: 1px solid #5B8ACF; background-color: #3971C4; color: #FFFFFF; font-weight: bold; font-size: 13px; }
+.CobaltFieldCaptionTD{ border-bottom: 1px solid #3364AE; border-left: 1px solid #5B8ACF; border-right: 1px solid #3364AE; border-top: 1px solid #5B8ACF; background-color: #3971C4; color: #FFFFFF; font-weight: bold; font-size: 13px; }
+.CobaltDataTD{ background-color: #F3F3F3; color: #000000; font-size: 13px; }
+.CobaltErrorDataTD{ background-color: #003FBF; color: #FFFFFF; font-size: 13px; font-weight: bold; }
+.CobaltSeparatorTD{ height: 1px; background-color: #00659C; }
+.CobaltAltDataTD{ background-color: #FFFFF7; font-size: 13px; }
+.CobaltFooterTD { border-bottom: 1px solid #3364AE; border-left: 1px solid #5B8ACF; border-right: 1px solid #3364AE; border-top: 1px solid #5B8ACF; background-color: #3971C4; color: #FFFFFF; font-weight: bold; font-size: 13px; }
+a.CobaltSorterLink:link,a.CobaltSorterLink:visited{ color: #FFFFFF; text-decoration: underline; }
+a.CobaltSorterLink:hover,a.CobaltSorterLink:active{ color: #FFCC66; text-decoration: none; }
+a.CobaltDataLink:link,a.CobaltDataLink:visited{ color: #3364AE; text-decoration: underline; }
+a.CobaltDataLink:hover,a.CobaltDataLink:active{ color: #5B8ACF; text-decoration: none; }
+a.CobaltNavigatorLink:link,a.CobaltNavigatorLink:visited{ color: #FFFFFF; text-decoration: underline; }
+a.CobaltNavigatorLink:hover,a.CobaltNavigatorLink:active{ color: #FFCC66; text-decoration: none; }
+a.CobaltDataLinkTop:link,a.CobaltDataLinkTop:visited{ color: #3364AE; font-weight: bold; text-decoration: none; font-size: 8pt; }
+a.CobaltDataLinkTop:hover,a.CobaltDataLinkTop:active{ color: #5B8ACF; font-weight: bold; text-decoration: underline; font-size: 8pt; }
+.CobaltButton { border-bottom: 1px solid #3364AE; border-left: 1px solid #5B8ACF; border-right: 1px solid #3364AE; border-top: 1px solid #538BFF; background-color: #3971C4; color: #FFFFFF; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; font-weight: bold; }
+.CobaltInput { border-bottom: 1px solid #5B8ACF; border-left: 1px solid #5B8ACF; border-right: 1px solid #5B8ACF; border-top: 1px solid #5B8ACF; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; }
+.CobaltTextarea { border-bottom: 1px solid #5B8ACF; border-left: 1px solid #5B8ACF; border-right: 1px solid #5B8ACF; border-top: 1px solid #5B8ACF; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; }
+.CobaltSelect { font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #00659C; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #FFFFFF; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+a.LoginDataLink:link,a.LoginDataLink:visited{ color: #FFFFFF; text-decoration: none; }
+a.LoginDataLink:hover,a.LoginDataLink:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; border-bottom: 1px solid #002062; border-left: 1px solid #538BFF; border-right: 1px solid #002062; border-top: 1px solid #538BFF; background-color: #003FBF; color: #FFCC66; font-weight: bold; font-size: 13px; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; background-color: #FFFFF7; font-size: 13px; }
+TD.workday { background-color: #FFFFF7; font-size: 13px; }
+TD.weekend { background-color: #EEEADB; font-size: 13px; }
+TH.calendar { margin: 1px; border-bottom: 1px solid #002062; border-left: 1px solid #538BFF; border-right: 1px solid #002062; border-top: 1px solid #538BFF; background-color: #003FBF; color: #FFCC66; font-weight: bold; font-size: 13px; }
+.CalendarButtons { border-bottom: 1px solid #002062; border-left: 1px solid #538BFF; border-right: 1px solid #002062; border-top: 1px solid #538BFF; background-color: #003FBF; color: #FFCC66; font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; font-weight: bold; }
+.CalendarControls { font-family: Arial, Tahoma, Verdana, Helvetica; font-size: 13px; }
+.Table { background-color: #DEDBDE; }
+.CobaltMainTitle { font-family: Tahoma, Arial, Verdana, Helvetica; color: #000000; font-weight: bold; font-size: 16px; }
+.BoxMenu {  border-top: 1px solid #E4E4E4; border-left: 1px solid #E4E4E4; border-bottom: 1px solid #E4E4E4; border-right: 1px solid #E4E4E4; background-color: #F3F3F3; font-size: 13px; }
+a:link,a:visited { color: #FF0000; text-decoration: underline; font-size: 13px; }
+a:hover,a:active { color: #0000FF; text-decoration: none; font-size: 13px; }
+.MenuTD { background-color: #DFDFDF; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.TitleMenu { font-family: Arial, Tahoma, Verdana, Helvetica; color: #290053; font-weight: bold; font-size: 13px;  }
+.LoginFontTitle { font-family: Verdana, Arial, Tahoma, Helvetica; color: #FFFFFF; font-weight: bold; font-size: 13px; }
+.LoginDataFont { font-family: Verdana, Arial, Tahoma, Verdana, Helvetica; color: #FFFFFF; font-size: 13px; }
+a.LoginDataLink:link,a.LoginDataLink:visited{ color: #FFFFFF; text-decoration: underline; }
+a.LoginDataLink:hover,a.LoginDataLink:active{ color: #FF6666; text-decoration: none; }
+.SmallFontBold { font-family: Arial, Tahoma, Verdana, Helvetica; color: #000000; font-weight: bold; font-size: 12px; }
+.SmallFont { font-family: Arial, Tahoma, Verdana, Helvetica; color: #000000; font-size: 11px; }
+.BgColor { font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 12px; background-color: #D1D1D1; }
+.NormalFont { font-family: Tahoma, Arial, Verdana, Helvetica; font-size: 13px; }
+a.MyTree:link,a.MyTree:visited{ color: #2C5696; text-decoration: none; }
+a.MyTree:hover,a.MyTree:active{ color: #5B8ACF; text-decoration: underline; }
+
+

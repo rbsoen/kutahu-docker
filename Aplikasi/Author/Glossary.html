@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleAuthor.css">
+<script language="JavaScript">
+//Begin CCS script
+//Include JSFunctions @1-5F368366
+  </script>
+<script language="JavaScript" src="../functions.js"></script>
+<script language="JavaScript">
+  
+//End Include JSFunctions
+
+//page_glossary_Button_Submit_OnClick @16-9D464603
+function page_glossary_Button_Submit_OnClick()
+{
+    var result;
+//End page_glossary_Button_Submit_OnClick
+
+//Confirmation Message @17-257FDD03
+    return confirm('Submit records?');
+//End Confirmation Message
+
+//Close page_glossary_Button_Submit_OnClick @16-BC33A33A
+    return result;
+}
+//End Close page_glossary_Button_Submit_OnClick
+
+//page_glossary_Cancel_OnClick @18-2BA2D27A
+function page_glossary_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_glossary_Cancel_OnClick
+
+//bind_events @1-818A2180
+function bind_events() {
+    if (document.forms["glossary"]) check_and_bind('document.forms["glossary"].Button_Submit','onclick',page_glossary_Button_Submit_OnClick);
+    if (document.forms["glossary"]) check_and_bind('document.forms["glossary"].Cancel','onclick',page_glossary_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+//End CCS script
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY">
+{Header}
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td valign="top" width="1%" rowspan="2">{MenuAuthor}</td> 
+    <td valign="top" height="10">
+      <table width="100%" border="0">
+        <tr>
+          <td>{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="CobaltMainTitle">Daftar Istilah</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">
+      <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr>
+          <td>
+            <!-- BEGIN Grid subknowledgeitem -->
+            <table class="CobaltFormTABLE" cellpadding="3" border="0" width="100%">
+              <!-- BEGIN Row -->
+              <tr>
+                <td class="CobaltColumnTD">Sub Topik :
+                  &nbsp;{SubKnowlItemTitle}&nbsp;</td> 
+              </tr>
+ 
+              <tr>
+                <td class="">{SubKnowlItemContent}&nbsp;</td> 
+              </tr>
+              <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr>
+                <td class="CobaltDataTD">No records&nbsp;</td> 
+              </tr>
+              <!-- END NoRecords -->
+            </table>
+ <!-- END Grid subknowledgeitem --></td> 
+        </tr>
+ 
+        <tr>
+          <td align="middle">
+            <!-- BEGIN EditableGrid glossary -->
+            <form name="{HTMLFormName}" action="{Action}" method="post">
+              <font class="CobaltFormHeaderFont"></font><input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+              <table class="CobaltFormTABLE" cellpadding="0" border="0" width="100%">
+                <!-- BEGIN Error -->
+                <tr>
+                  <td class="CobaltErrorDataTD" colspan="3">{Error}</td> 
+                </tr>
+                <!-- END Error -->
+                <tr>
+                  <td class="CobaltColumnTD" nowrap align="middle" colspan="2">
+                    <!-- BEGIN Sorter Sorter_GlosTitle --><a class="CobaltSorterLink" href="{Sort_URL}">Istilah</a> 
+                    <!-- BEGIN Asc_On --><img src="../Themes/Cobalt/AscOn.gif" border="0"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img src="../Themes/Cobalt/DescOn.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_GlosTitle -->&nbsp;</td> 
+                  <td class="CobaltColumnTD" nowrap align="middle">Hapus</td> 
+                </tr>
+                <!-- BEGIN Row -->
+                <!-- BEGIN RowError -->
+                <tr>
+                  <td class="CobaltErrorDataTD" colspan="1">{Error}</td> 
+                </tr>
+                <!-- END RowError -->
+                <tr>
+                  <td class="CobaltDataTD" valign="top">Istilah</td> 
+                  <td class="CobaltDataTD" valign="top"><input class="CobaltInput" maxlength="150" size="50" value="{GlosTitle}" name="{GlosTitle_Name}"></td> 
+                  <td class="CobaltDataTD" align="middle" width="1%" rowspan="2">
+                    <!-- BEGIN CheckBox CheckBox_Delete --><input class="" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete --></td> 
+                </tr>
+ 
+                <tr>
+                  <td class="CobaltDataTD" valign="top">Keterangan</td> 
+                  <td class="CobaltDataTD" valign="top">
+                    <p><textarea class="CobaltTextarea" style="WIDTH: 100%" name="{GlosDesc_Name}" rows="3" cols="50">{GlosDesc}</textarea></p>
+ </td> 
+                </tr>
+ 
+                <tr>
+                  <td bgcolor="#8DE2E2" colspan="3" height="1"></td> 
+                </tr>
+                <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr>
+                  <td class="CobaltDataTD" colspan="3">No records&nbsp;</td> 
+                </tr>
+                <!-- END NoRecords -->
+                <tr>
+                  <td class="CobaltFooterTD" nowrap align="right" colspan="3">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN Prev_On --><a class="CobaltNavigatorLink" href="{Prev_URL}"><img src="../Themes/Cobalt/PrevOn.gif" border="0"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img src="../Themes/Cobalt/PrevOff.gif" border="0"><!-- END Prev_Off -->
+                    <!-- BEGIN Next_On --><a class="CobaltNavigatorLink" href="{Next_URL}"><img src="../Themes/Cobalt/NextOn.gif" border="0"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img src="../Themes/Cobalt/NextOff.gif" border="0"><!-- END Next_Off --><!-- END Navigator Navigator -->&nbsp; 
+                    <!-- BEGIN Button Button_Submit --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Submit -->&nbsp; 
+                    <!-- BEGIN Button Cancel --><input class="CobaltButton" type="submit" value="Batal" name="{Button_Name}"><!-- END Button Cancel -->&nbsp; </td> 
+                </tr>
+ 
+              </table>
+ 
+            </form>
+ <!-- END EditableGrid glossary --></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>

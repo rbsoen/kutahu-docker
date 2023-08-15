@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>Kutahu e-learning system</title>
+<link rel="stylesheet" type="text/css" href="../Themes/Cobalt/StyleAuthor.css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+function CekMyValue(MyObj,MyValidator)
+{
+	
+	var MyElement = document.getElementById(MyValidator);
+	
+		if(MyObj.value=="")
+		{MyElement.style.visibility="visible";document.MM_returnValue=false;}else{MyElement.style.visibility="hidden";}
+	
+
+}
+
+
+function MyValidate()
+{
+	document.MM_returnValue=true;
+
+	CekMyValue(document.forms[0].QueTitle,'ValQueTitle');
+	CekMyValue(document.forms[0].QueChoiceA,'ValQueChoiceA');	
+	CekMyValue(document.forms[0].QueChoiceB,'ValQueChoiceB');
+	CekMyValue(document.forms[0].QueAnswer,'ValQueAnswer');
+}
+
+//-->
+</script>
+<script language="JavaScript">
+//Begin CCS script
+//Include JSFunctions @1-5F368366
+  </script>
+<script language="JavaScript" src="../functions.js"></script>
+<script language="JavaScript">
+  
+//End Include JSFunctions
+
+//page_question_Button_Delete_OnClick @10-1C868420
+function page_question_Button_Delete_OnClick()
+{
+    var result;
+//End page_question_Button_Delete_OnClick
+
+//Confirmation Message @11-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close page_question_Button_Delete_OnClick @10-BC33A33A
+    return result;
+}
+//End Close page_question_Button_Delete_OnClick
+
+//page_question_Button_Cancel_OnClick @12-4FE3EF41
+function page_question_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_question_Button_Cancel_OnClick
+
+//bind_events @1-640CBA74
+function bind_events() {
+    if (document.forms["question"]) check_and_bind('document.forms["question"].Button_Delete','onclick',page_question_Button_Delete_OnClick);
+    if (document.forms["question"]) check_and_bind('document.forms["question"].Button_Cancel','onclick',page_question_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+//End CCS script
+</script>
+</head>
+<body link="#000000" vlink="#000000" alink="#ff0000" bgcolor="#ffffff" text="#000000" class="CobaltPageBODY" onload="MyValidate();">
+{Header}
+<table cellspacing="0" cellpadding="0" width="100%" height="100%" border="0">
+  <tr>
+    <td valign="top" width="1%" rowspan="2">{MenuAuthor}</td> 
+    <td valign="top" height="10">
+      <table width="100%" border="0">
+        <tr>
+          <td>{lblTopLink}</td> 
+        </tr>
+ 
+        <tr>
+          <td class="CobaltMainTitle">{lblTitle}</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+ 
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Record question -->
+      <form name="{HTMLFormName}" action="{Action}" method="post" onSubmit="if(hdnCancel.value!=1){MyValidate();return document.MM_returnValue;}">
+        <font class="CobaltFormHeaderFont"></font> 
+        <table class="CobaltFormTABLE" cellpadding="3" border="0">
+          <!-- BEGIN Error -->
+          <tr>
+            <td class="CobaltErrorDataTD" colspan="2">{Error}</td> 
+          </tr>
+          <!-- END Error -->
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Soal</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="250" size="50" value="{QueTitle}" name="{QueTitle_Name}" onchange="CekMyValue(this,'ValQueTitle')"><span id="ValQueTitle">*</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltDataTD" nowrap colspan="2">Pilihan Jawaban</td>
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>A&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="250" size="50" value="{QueChoiceA}" name="{QueChoiceA_Name}" onchange="CekMyValue(this,'ValQueChoiceA')"><span id="ValQueChoiceA">*</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>B&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="250" size="50" value="{QueChoiceB}" name="{QueChoiceB_Name}" onchange="CekMyValue(this,'ValQueChoiceB')"><span id="ValQueChoiceB">*</span>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>C&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="250" size="50" value="{QueChoiceC}" name="{QueChoiceC_Name}">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>D&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="250" size="50" value="{QueChoiceD}" name="{QueChoiceD_Name}">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>E&nbsp;</td> 
+            <td class="CobaltDataTD"><input class="CobaltInput" maxlength="250" size="50" value="{QueChoiceE}" name="{QueChoiceE_Name}">&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Jawaban&nbsp;</td> 
+            <td class="CobaltDataTD">
+              <select name="{QueAnswer_Name}" class="CobaltSelect" onchange="CekMyValue(this,'ValQueAnswer')">
+                <option value="" selected>Select Value</option>
+ {QueAnswer_Options} 
+              </select><span id="ValQueAnswer">*</span>
+ &nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Modul</td> 
+            <td class="CobaltDataTD"><input type="checkbox" name="{QueModule_Name}" value="1" class="" {QueModule}>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFieldCaptionTD" nowrap>Bab</td> 
+            <td class="CobaltDataTD"><input type="checkbox" name="{QueCategory_Name}" value="1" class="" {QueCategory}>&nbsp;</td> 
+          </tr>
+ 
+          <tr>
+            <td class="CobaltFooterTD" nowrap align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="CobaltButton" type="submit" value="Simpan" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="CobaltButton" type="submit" value="Hapus" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="CobaltButton" type="submit" value="Batal" name="{Button_Name}" onclick="hdnCancel.value=1"><input type="hidden" name="hdnCancel" value="0"><!-- END Button Button_Cancel -->&nbsp; </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record question --></td> 
+  </tr>
+</table>
+{Footer}
+</body>
+</html>
