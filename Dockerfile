@@ -8,8 +8,14 @@ WORKDIR /var/www/html
 ENV TZ Asia/Jakarta
 RUN echo "$TZ" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
 
-# untuk sementara waktu berilah semua permission
-RUN chmod -R 777 *
+# semua skrip
+RUN chown -R www-data:www-data *
+RUN chmod -R 744 *
+
+# upload Direktori Gambar
+RUN mkdir Document
+RUN chown -R www-data:www-data Document
+RUN chmod -R 777 Document
 
 EXPOSE 80
 
